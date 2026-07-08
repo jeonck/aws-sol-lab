@@ -21,6 +21,7 @@ Pair each scenario with the matching [hands-on lab](../labs/) so you can back th
 | [Security & Compliance](security-compliance) | "Pass SOC 2 / HIPAA / ISMS-P audits on AWS" | IAM, GuardDuty, Security Hub, CloudTrail, KMS, WAF |
 | [Cost Optimization](cost-optimization) | "Cut our AWS bill 30% without hurting reliability" | Savings Plans, Spot, Compute Optimizer, Cost Explorer, S3 lifecycle |
 | [Global-Scale Applications](global-scale) | "Serve users on three continents with low latency" | CloudFront, Global Accelerator, Route 53, DynamoDB Global Tables |
+| [CI/CD on AWS](cicd) | "Deploy daily with zero downtime and no stored credentials" | GitHub Actions OIDC, ECR, CodeDeploy, CodePipeline, CloudWatch |
 
 ## How to use these playbooks
 
@@ -37,3 +38,4 @@ Pair each scenario with the matching [hands-on lab](../labs/) so you can back th
 - [Security & Compliance](security-compliance) — organization-wide guardrails and audit readiness.
 - [Cost Optimization](cost-optimization) — commitment strategy, right-sizing, and a FinOps operating model.
 - [Global-Scale Applications](global-scale) — edge delivery, multi-Region data, and residency constraints.
+- [CI/CD on AWS](cicd) — pipelines with OIDC federation, blue/green deployments, and alarm-gated rollback.
