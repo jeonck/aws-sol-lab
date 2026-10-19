@@ -22,6 +22,7 @@ Pair each scenario with the matching [hands-on lab](../labs/) so you can back th
 | [Cost Optimization](cost-optimization) | "Cut our AWS bill 30% without hurting reliability" | Savings Plans, Spot, Compute Optimizer, Cost Explorer, S3 lifecycle |
 | [Global-Scale Applications](global-scale) | "Serve users on three continents with low latency" | CloudFront, Global Accelerator, Route 53, DynamoDB Global Tables |
 | [CI/CD on AWS](cicd) | "Deploy daily with zero downtime and no stored credentials" | GitHub Actions OIDC, ECR, CodeDeploy, CodePipeline, CloudWatch |
+| [Observability & Monitoring](observability) | "Find the cause of an outage in minutes, across 12 accounts" | CloudWatch, Application Signals, OpenTelemetry, cross-account observability, CloudWatch Omni |
 
 ## How to use these playbooks
 
@@ -39,3 +40,4 @@ Pair each scenario with the matching [hands-on lab](../labs/) so you can back th
 - [Cost Optimization](cost-optimization) — commitment strategy, right-sizing, and a FinOps operating model.
 - [Global-Scale Applications](global-scale) — edge delivery, multi-Region data, and residency constraints.
 - [CI/CD on AWS](cicd) — pipelines with OIDC federation, blue/green deployments, and alarm-gated rollback.
+- [Observability & Monitoring](observability) — OpenTelemetry, cross-account monitoring, SLO alerting, and AI-assisted investigation.
