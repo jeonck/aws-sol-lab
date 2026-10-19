@@ -32,7 +32,7 @@ Copy this into your own notes and fill in the **Your level** column honestly. Th
 | Serverless | Lambda, API Gateway, Step Functions | | [Lab 02](../labs/lab-02-serverless-api), [Lab 04](../labs/lab-04-event-driven) |
 | Containers | ECS Fargate, ECR, service discovery | | [Lab 03](../labs/lab-03-microservices-ecs) |
 | Security | IAM, least privilege, KMS, security groups | | Every lab; IAM roles feature in [Lab 02](../labs/lab-02-serverless-api) and [Lab 03](../labs/lab-03-microservices-ecs) |
-| Observability | CloudWatch metrics, logs, alarms, dashboards | | Verification steps of every lab, alarms in [Lab 01](../labs/lab-01-three-tier-web) and [Lab 06](../labs/lab-06-dr-failover) |
+| Observability | CloudWatch metrics, logs, alarms, dashboards | | [Lab 07](../labs/lab-07-observability) (logs, custom metrics, alarms, dashboard); verification steps of every lab, alarms in [Lab 01](../labs/lab-01-three-tier-web) and [Lab 06](../labs/lab-06-dr-failover) |
 | Cost | Budgets, Cost Explorer, tagging, right-sizing | | [Cost Guardrails](../getting-started/cost-guardrails) plus per-lab cost tracking |
 | IaC | CloudFormation, Terraform, CDK | | Not covered by the CLI-first labs — rebuild a lab in Terraform to claim *practiced* |
 

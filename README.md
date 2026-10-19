@@ -7,8 +7,8 @@ Hands-on AWS architecture labs — core architecture styles, scenario-based desi
 ## What's inside
 
 - **Core Architecture Styles** — three-tier web, serverless, microservices, event-driven, data & analytics, multi-account landing zone
-- **Scenario Playbooks** — HA & disaster recovery, hybrid networking, migration, security & compliance, cost optimization, global scale
-- **Hands-on Labs** — six step-by-step labs with real AWS CLI commands, verification checks, and teardown steps
+- **Scenario Playbooks** — HA & disaster recovery, hybrid networking, migration, security & compliance, cost optimization, global scale, CI/CD, observability
+- **Hands-on Labs** — seven step-by-step labs with real AWS CLI commands, verification checks, and teardown steps
 - **Career Toolkit** — skill matrix, resume bullets, LinkedIn profile guidance, and interview stories built from lab evidence
 
 ## Tech stack

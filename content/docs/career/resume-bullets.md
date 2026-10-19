@@ -3,7 +3,7 @@ title: "Resume Bullets"
 weight: 2
 ---
 
-A lab you cannot describe in one strong resume line might as well not have happened. This page gives you the formula, a good and bad example for each of the six labs, and the honesty rules that keep your bullets defensible under interview pressure.
+A lab you cannot describe in one strong resume line might as well not have happened. This page gives you the formula, a good and bad example for each of the seven labs, and the honesty rules that keep your bullets defensible under interview pressure.
 
 ## The formula
 
@@ -26,8 +26,9 @@ Where these bullets live: under a resume section called **Projects** or **Self-D
 | 04 | "Used SQS and SNS" | Two service names with no architecture, problem, or result |
 | 05 | "Big data analytics with AWS" | Buzzword with no content |
 | 06 | "Implemented enterprise disaster recovery for multi-region systems" | "Enterprise" implies scale and stakes that did not exist |
+| 07 | "Set up monitoring and dashboards with CloudWatch" | Generic; no signals, alarms, or validation named, and nothing shows the monitoring ever caught anything |
 
-The same six labs, written to the formula:
+The same seven labs, written to the formula:
 
 | Lab | Good bullet |
 |---|---|
@@ -37,6 +38,7 @@ The same six labs, written to the formula:
 | 04 | "Implemented an event-driven order pipeline with EventBridge, SNS fan-out, and SQS queues including a dead-letter queue; demonstrated retry and failure isolation by injecting poison messages" |
 | 05 | "Built an S3-based data lake with Glue-cataloged partitions queried through Athena, reducing scanned data per query by 90%+ via partitioning and columnar formats" |
 | 06 | "Designed and executed a warm-standby DR failover between us-east-1 and us-west-2 using Route 53 health checks and Aurora cross-region replication, measuring an end-to-end RTO of under 15 minutes in a lab environment" |
+| 07 | "Built a CloudWatch observability baseline for a serverless service in a personal lab: structured JSON logs, Embedded Metric Format custom metrics, a metric-math error-rate alarm, and a dashboard; validated by injecting failures and confirming the alarm fired within minutes" |
 
 Adjust every number to what *you* measured — the specific values above are illustrations, and an interviewer will ask where your numbers came from. That question should be one you want.
 

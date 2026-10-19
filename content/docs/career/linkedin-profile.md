@@ -80,7 +80,7 @@ If your lab portfolio is substantial and current employment is unrelated, you ca
 > **Self-Directed AWS Lab Portfolio** — Independent Project
 > *Jan 2026 – Present*
 >
-> Designed, built, and tore down six AWS reference architectures using the AWS CLI, documenting each with diagrams and runbooks on GitHub.
+> Designed, built, and tore down seven AWS reference architectures using the AWS CLI, documenting each with diagrams and runbooks on GitHub.
 >
 > - Built a highly available three-tier web app (ALB, EC2 Auto Scaling across two AZs, RDS Multi-AZ) and verified instance and database failover
 > - Executed a cross-region warm-standby DR failover (Route 53 health checks, Aurora replication) with a measured RTO under 15 minutes

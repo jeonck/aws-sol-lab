@@ -30,6 +30,7 @@ The teardown step is not optional. It is part of the skill: production engineers
 | [Lab 4 — Event-Driven Pipeline](lab-04-event-driven) | Intermediate | 1.5–2 h | < $0.50 | S3, EventBridge, SQS, Lambda, DLQ |
 | [Lab 5 — Mini Data Lake](lab-05-data-pipeline) | Beginner | 1–1.5 h | < $0.50 | S3, Glue, Athena |
 | [Lab 6 — DR Failover with Route 53](lab-06-dr-failover) | Intermediate | 1.5–2 h | < $1.50 | S3 CRR, Route 53, CloudWatch |
+| [Lab 7 — Observability Baseline](lab-07-observability) | Beginner | 1–1.5 h | < $0.25 | CloudWatch Logs, metrics, alarms, dashboards, Lambda, SNS |
 
 Estimates assume the **us-east-1** region and prompt teardown. Times include reading, building, verifying, and tearing down.
 
