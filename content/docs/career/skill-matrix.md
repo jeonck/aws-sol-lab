@@ -28,7 +28,7 @@ Copy this into your own notes and fill in the **Your level** column honestly. Th
 | Compute | EC2, Auto Scaling, ALB | | [Lab 01](../labs/lab-01-three-tier-web) |
 | Networking | VPC, subnets, NAT, Route 53, security groups | | [Lab 01](../labs/lab-01-three-tier-web), [Lab 06](../labs/lab-06-dr-failover) |
 | Storage | S3, EBS, lifecycle policies, replication | | [Lab 05](../labs/lab-05-data-pipeline), [Lab 06](../labs/lab-06-dr-failover) |
-| Databases | RDS, Aurora, DynamoDB | | [Lab 01](../labs/lab-01-three-tier-web), [Lab 02](../labs/lab-02-serverless-api), [Lab 06](../labs/lab-06-dr-failover) |
+| Databases | RDS, Aurora, DynamoDB | | [Lab 01](../labs/lab-01-three-tier-web), [Lab 02](../labs/lab-02-serverless-api) |
 | Serverless | Lambda, API Gateway, Step Functions | | [Lab 02](../labs/lab-02-serverless-api), [Lab 04](../labs/lab-04-event-driven) |
 | Containers | ECS Fargate, ECR, service discovery | | [Lab 03](../labs/lab-03-microservices-ecs) |
 | Security | IAM, least privilege, KMS, security groups | | Every lab; IAM roles feature in [Lab 02](../labs/lab-02-serverless-api) and [Lab 03](../labs/lab-03-microservices-ecs) |

@@ -37,7 +37,7 @@ The same seven labs, written to the formula:
 | 03 | "Deployed two containerized microservices to ECS Fargate behind an ALB with path-based routing, images in ECR and inter-service discovery via Cloud Map, in a self-directed lab project" |
 | 04 | "Implemented an event-driven order pipeline with EventBridge, SNS fan-out, and SQS queues including a dead-letter queue; demonstrated retry and failure isolation by injecting poison messages" |
 | 05 | "Built an S3-based data lake with Glue-cataloged partitions queried through Athena, reducing scanned data per query by 90%+ via partitioning and columnar formats" |
-| 06 | "Designed and executed a warm-standby DR failover between us-east-1 and us-west-2 using Route 53 health checks and Aurora cross-region replication, measuring an end-to-end RTO of under 15 minutes in a lab environment" |
+| 06 | "Built and tested a cross-region DR failover for a static site in a personal AWS lab: S3 Cross-Region Replication from us-east-1 to us-west-2 behind Route 53 health-check failover routing; injected a primary failure and measured DNS failover completing in under 90 seconds" |
 | 07 | "Built a CloudWatch observability baseline for a serverless service in a personal lab: structured JSON logs, Embedded Metric Format custom metrics, a metric-math error-rate alarm, and a dashboard; validated by injecting failures and confirming the alarm fired within minutes" |
 
 Adjust every number to what *you* measured — the specific values above are illustrations, and an interviewer will ask where your numbers came from. That question should be one you want.
@@ -51,7 +51,7 @@ Every bullet must survive the follow-up question "tell me more about that". Writ
 1. **Label the context once, clearly.** Say "in a personal AWS lab", "self-directed project", or put the bullets under a Projects heading that says it. You do not need the disclaimer in every line — the section heading carries it — but the reader must never be able to *reasonably* conclude it was production work.
 2. **Never imply scale you did not have.** "Highly available" is true — you built two AZs and tested failover. "High-traffic" or "enterprise" is not. Describe the architecture's properties, not imaginary users.
 3. **Use verbs that match reality.** You *built*, *designed*, *deployed*, *tested* — all true. You did not *operate*, *maintain*, or *support* — those verbs imply time-in-service and on-call.
-4. **Numbers must be measured, not decorated.** "RTO under 15 minutes" is defensible if you timed it. Never borrow impressive-sounding numbers from the lab writeup itself.
+4. **Numbers must be measured, not decorated.** "DNS failover in under 90 seconds" is defensible if you timed it with a timestamped loop. Never borrow impressive-sounding numbers from the lab writeup itself.
 5. **Frame labs as an asset, not an apology.** A self-directed portfolio signals initiative, current skills, and the ability to learn without hand-holding. Present it with the same confidence as job experience — just labeled accurately.
 
 ## Workflow

@@ -20,15 +20,15 @@ For lab stories, the strongest material is almost always in **Action**, at the m
 
 Question: *"Tell me about a challenging technical project you worked on."*
 
-> **Situation** — "I've been building a portfolio of AWS architectures as self-directed projects, and disaster recovery was the area where I had the least practical intuition — I understood RTO and RPO on paper but had never actually failed anything over."
+> **Situation** — "I've been building a portfolio of AWS architectures as self-directed projects, and disaster recovery was the area where I had the least practical intuition — I understood RTO on paper but had never actually failed anything over."
 >
-> **Task** — "I set out to build a warm-standby architecture across two regions — primary in us-east-1, scaled-down standby in us-west-2 — and to actually execute a failover and measure the real RTO, not just diagram it."
+> **Task** — "I set out to build the smallest honest DR setup I could: a static site in us-east-1 replicated to us-west-2, with DNS failover between them. The goal was to break the primary on purpose and measure the real failover time, not just diagram it."
 >
-> **Action** — "I built the stack in both regions with Aurora cross-region replication for data and Route 53 health checks with failover routing for traffic. The interesting part was the failover test. When I simulated the primary failure, DNS failed over quickly, but my measured RTO was much worse than expected — clients kept hitting the dead region. I dug in and found two issues: my health check interval and threshold were too conservative, and I'd left a high TTL on the record, so resolvers cached the old answer. I tuned the health check, dropped the TTL, promoted the Aurora replica, and re-ran the whole exercise from scratch."
+> **Action** — "I used S3 Cross-Region Replication to keep a standby bucket in sync and Route 53 failover records driven by a health check on the primary. I chose the health check interval, the failure threshold, and a short record TTL deliberately, because those three numbers set the failover time. To test it, I deleted the primary's page and ran a timestamped loop that queried the zone's name servers directly, so I could see the exact moment the answer flipped to the standby. I also confirmed the delete was not replicated, so the standby kept serving."
 >
-> **Result** — "Second run, end-to-end RTO came in under 15 minutes, and I could account for every minute of it — detection, DNS propagation, replica promotion. The bigger lesson was that DR is a rehearsal problem, not an architecture problem: the design was right the first time, but the untested parameters would have sunk a real failover. If I ran it again I'd script the whole failover so it's a runbook, not a memory."
+> **Result** — "DNS flipped to the standby in under 90 seconds, and I could account for it: roughly 30 to 40 seconds of health-check detection plus the polling interval of my own loop. The lesson was that DNS-layer failover time is a function of parameters you choose, not of the architecture diagram. The honest limit is that this was a static site with no data tier, so I never tested data replication lag or promoting a database. If I extended it, I'd add a stateful tier, such as Aurora Global Database, and script the whole failover as a runbook."
 
-Why this works: it is honest about being a lab, the failure is the centerpiece, the numbers are measured, and it ends with a judgment ("DR is a rehearsal problem") that sounds like an engineer, not a student.
+Why this works: it is honest about being a lab, the failure is the centerpiece, the numbers are measured, and it ends with a judgment ("failover time is a function of parameters you choose") and an honest limit, which sounds like an engineer, not a student.
 
 ## Story template
 
@@ -56,7 +56,7 @@ AWS interviews mix behavioral and technical in single questions. Map each to a l
 | Question | Feed it with |
 |---|---|
 | "Tell me about a time you debugged a difficult problem" | Any lab error story — target group health checks, IAM denials, DNS caching |
-| "Describe a technical decision where you weighed trade-offs" | Serverless vs containers for the same API ([Lab 02](../labs/lab-02-serverless-api) vs [Lab 03](../labs/lab-03-microservices-ecs)); warm standby vs pilot light ([Lab 06](../labs/lab-06-dr-failover)) |
+| "Describe a technical decision where you weighed trade-offs" | Serverless vs containers for the same API ([Lab 02](../labs/lab-02-serverless-api) vs [Lab 03](../labs/lab-03-microservices-ecs)); DR tiers such as pilot light vs warm standby ([HA & DR playbook](../scenarios/high-availability-dr), with [Lab 06](../labs/lab-06-dr-failover) as the hands-on baseline) |
 | "Tell me about a time you had to learn something quickly" | The domain you were weakest in when you started its lab |
 | "How do you make sure something you built actually works?" | The verification-and-teardown discipline: failover tests, load tests, tag-based cleanup audits |
 | "Tell me about a failure" | The lab run that went wrong — with the diagnosis and the re-run |

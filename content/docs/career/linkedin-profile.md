@@ -46,7 +46,7 @@ Notes on the template: the service names in the middle paragraph are doing keywo
 
 Add each completed lab under the **Projects** section of your profile (Add profile section → Recommended → Add projects). Per project:
 
-- **Name** — the architecture, not the lab number: "Multi-Region DR Failover on AWS (warm standby)".
+- **Name** — the architecture, not the lab number: "Cross-Region DR Failover on AWS (S3 Replication and Route 53)".
 - **Description** — your [resume bullet](resume-bullets) plus 2–3 sentences of detail: the problem framing, key design decisions, what you measured.
 - **Link** — the GitHub repo with your diagram, commands, and README. A repo link is the difference between a claim and evidence.
 - **Skills** — attach the relevant skills so the project reinforces your Skills section.
@@ -83,7 +83,7 @@ If your lab portfolio is substantial and current employment is unrelated, you ca
 > Designed, built, and tore down seven AWS reference architectures using the AWS CLI, documenting each with diagrams and runbooks on GitHub.
 >
 > - Built a highly available three-tier web app (ALB, EC2 Auto Scaling across two AZs, RDS Multi-AZ) and verified instance and database failover
-> - Executed a cross-region warm-standby DR failover (Route 53 health checks, Aurora replication) with a measured RTO under 15 minutes
+> - Executed a cross-region DR failover (S3 Cross-Region Replication, Route 53 health-check failover routing) and measured DNS failover time under 90 seconds
 > - Deployed serverless and container variants of the same API (Lambda + API Gateway; ECS Fargate) and compared cost and operational trade-offs
 > - Enforced cost discipline with AWS Budgets, tagging, and same-day teardown, keeping total portfolio cost under $20
 
